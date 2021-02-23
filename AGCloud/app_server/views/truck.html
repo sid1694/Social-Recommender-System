@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+    <style type="text/css">
+        #ballContainer {
+            float: left;
+            position: relative;
+            padding-top: 25%;
+        }
+ 
+        .top-buffer {
+            margin-top: 50px;
+        }
+    </style>
+ 
+    <script type="text/javascript">
+        $(function() {
+            moveBall();
+        });
+ 
+        function moveBall() {
+            $("#ballContainer:first").animate({
+                left: 350
+            },
+            {
+                duration: 10000,
+                complete: function() {
+                    $("#ballContainer:first").animate({
+                        left:350
+                        
+                        
+                    }, {
+                        duration: 10000,
+                        complete: function() {
+                            moveBall();
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="height: 700px; width:50%; background-image: url(https://i.ibb.co/N71sS0R/Screen-Shot-2019-12-09-at-2-21-40-AM.png); background-size: 200%;">
+        <div class="row">
+            <div class="col-sm-12 top-buffer">
+                <div id="ballContainer">
+                    <img src="https://blog.appscrip.com/wp-content/uploads/2019/01/delivery-truck.png" width="50px" alt="image" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

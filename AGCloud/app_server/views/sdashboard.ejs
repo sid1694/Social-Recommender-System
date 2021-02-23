@@ -1,0 +1,188 @@
+<html>
+<head> 
+  <title> AG Machine Cloud </title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+  type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+  type="text/javascript" charset="utf-8"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+    <style type="text/css">
+        #ballContainer {
+            float: left;
+            position: relative;
+            padding-top: 2%;
+        }
+ 
+        .top-buffer {
+            margin-top: 50px;
+        }
+    </style>
+ 
+    <script type="text/javascript">
+        $(function() {
+            moveBall();
+        });
+ 
+        function moveBall() {
+            $("#ballContainer:first").animate({
+                left: 252
+            },
+            {
+                duration: 6000,
+                complete: function() {
+                    $("#ballContainer:first").animate({
+                        top: 178,
+                        
+                        
+                    }, {
+                        duration: 6000,
+                        complete: function() {
+                            moveBall();
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+
+
+<style>
+#container {
+                min-width: 0px;
+                max-width: 650px;
+                height: 300px;
+
+            }
+            #container1 {
+                min-width: 0px;
+                max-width: 650px;
+                height: 300px;
+
+            }
+</style>
+  
+</head>      
+<body>
+    <div style="background-color: #141b2e; width: 100%; height: 90px;">
+        <div style="width: 7%; height: 70px; border-radius: 50%; background-image: url(http://www.mxmexhibitions.com/agrotecno/img/Buildafro.png); margin-left: 2%; position: absolute; top: 10; background-size: 85%; background-position:center; background-position-x: 10; float: left;"></div>
+        <h1 style="color: cornsilk; position: absolute; top: 10; font-size: 350%; padding-left: 10%;">AG MACHINE CLOUD</h1>
+        <div style="width: 30%; padding-left: 91%; padding-top: 1%;">
+        <a href="/shome" style="color: whitesmoke; font-size: 200%;">Home</a>
+        </div>
+    </div>
+    <div style="height: 670px; width: 98%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-top: 1%; margin-left: 1%;">
+    <h1 style="text-align: center;"> Service Carrier Staff Dashboard</h1>
+    <div class="row">
+        <div class="col-6">
+            <div class="container" style="height: 500px; width:100%; background-image: url(https://i.ibb.co/R28jM9q/Screen-Shot-2019-12-09-at-1-08-18-AM.png); background-size: 100%;">
+                <div class="row">
+                    <div class="col-sm-12 top-buffer">
+                        <div id="ballContainer" style="margin-left: 30%;">
+                            <img src="https://www.flaticon.com/premium-icon/icons/svg/353/353805.svg" width="20px" alt="image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="col-6">
+            <div id="container"></div>
+            <div id="container1"></div>
+    </div>
+
+
+</div>
+</div>
+</body>
+<script>
+Highcharts.chart('container', {
+
+title: {
+    text: 'TRACKING OF WEATHER SENSOR'
+},
+
+xAxis: {
+        categories: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        title: {
+            text: 'Temperature (°C)'
+        }
+    },
+
+series: [{
+    name: 'Temperature',
+    data: [55, 57,53, 57, 0, 54, 60]
+}],
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+            }
+        }
+    }]
+}
+
+});
+
+Highcharts.chart('container1', {
+
+title: {
+    text: 'TRACKING OF FUEL SENSOR'
+},
+
+xAxis: {
+        categories: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        title: {
+            text: 'Distance (Miles)'
+        }
+    },
+
+series: [{
+    name: 'Miles',
+    data: [200,185,165, 145, 0, 200, 185]
+}],
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+            }
+        }
+    }]
+}
+
+});
+</script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
+    

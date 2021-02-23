@@ -1,0 +1,175 @@
+<html>
+<head> 
+  <title> AG Machine Cloud </title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>      
+<body>
+    <div style="background-color: #141b2e; width: 100%; height: 90px;">
+        <div style="width: 7%; height: 70px; border-radius: 50%; background-image: url(http://www.mxmexhibitions.com/agrotecno/img/Buildafro.png); margin-left: 2%; position: absolute; top: 10; background-size: 85%; background-position: center; background-position-x: 10; float: left;"></div>
+        <h1 style="color: cornsilk; position: absolute; top: 15; font-size: 350%; padding-left: 10%;">AG MACHINE CLOUD</h1>
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="float: left; background-color: #141b2e; border-color: #141b2e; font-size: 200%; position:absolute; right: 0; margin-right: 2%;">
+                        Menu
+                      </a>
+                    
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="float: left;">
+                        <a class="dropdown-item" href="/fhome">HOME</a>
+                        <a class="dropdown-item" href="/fmachines">Machines</a>
+                        <a class="dropdown-item" href="/fservicerequests">Service Requests</a>
+                        <a class="dropdown-item" href="/fdashboard">Dashboard</a>
+                      </div>
+    </div>
+    <div style="width: 15%; height: 700px; background-color:rgb(13, 30, 61); float: left">
+        <div style="background-image: url(https://middle.pngfans.com/20190526/yi/user-logo-png-user-computer-icons-clipart-c58837c78f66866c.jpg); width: 63%; height: 120px; border-radius: 50%; background-size: 100%; background-position: center; float: left; margin-top: 10%; margin-left: 8%; margin-bottom: 10%;"></div>
+        <p style="padding-left: 15%; font-size: 200%; color:white;">Welcome</p>
+        <p style="padding-left: 15%; font-size: 200%; color:white;"><%= user[0].firstname %></p>
+    </div>
+    <div style="width: 85%; height: 700px; margin-left: 15%; background-color:rgb(12, 6, 41);background-size: 102%;">
+            <h1 style="font-size: 350%; color: #FFF; padding-left: 30%;">Make Payment</h1>
+            <div class="container py-5">
+            
+            
+              <div class="row">
+                <div class="col-lg-7 mx-auto">
+                  <div class="bg-white rounded-lg shadow-sm p-5">
+                    <!-- Credit card form tabs -->
+                    <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                      <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                            <i class="fa fa-credit-card"></i>
+                                            Credit Card
+                                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                            <i class="fa fa-paypal"></i>
+                                            Paypal
+                                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                            <i class="fa fa-university"></i>
+                                             Bank Transfer
+                                         </a>
+                      </li>
+                    </ul>
+                    <!-- End -->
+            
+            
+                    <!-- Credit card form content -->
+                    <div class="tab-content">
+            
+                      <!-- credit card info-->
+                      <div id="nav-tab-card" class="tab-pane fade show active">
+                        <form role="form" action="/pay">
+                          <div class="form-group">
+                            <label for="username">Full name (on the card)</label>
+                            <input type="text" name="username" placeholder="Full name" required class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="cardNumber">Card number</label>
+                            <div class="input-group">
+                              <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required pattern="^4\d{15}$">
+                              <div class="input-group-append">
+                                <span class="input-group-text text-muted">
+                                                            <i class="fa fa-cc-visa mx-1"></i>
+                                                            <i class="fa fa-cc-amex mx-1"></i>
+                                                            <i class="fa fa-cc-mastercard mx-1"></i>
+                                  </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <div class="form-group">
+                                <label><span class="hidden-xs">Expiration</span></label>
+                                <div class="input-group">
+                                  <input type="number" placeholder="MM" name="" class="form-control" required>
+                                  <input type="number" placeholder="YY" name="" class="form-control" required>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group mb-4">
+                                <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                            <i class="fa fa-question-circle"></i>
+                                                        </label>
+                                <input type="text" required class="form-control">
+                              </div>
+                            </div>
+            
+            
+            
+                          </div>
+                          <button type="submit" formaction="/pay" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Confirm Payment  </button>
+                        </form>
+                      </div>
+                      <!-- End -->
+            
+                      <!-- Paypal info -->
+                      <div id="nav-tab-paypal" class="tab-pane fade">
+                        <p>Paypal is easiest way to pay online</p>
+                        <p>
+                          <i class="fa fa-paypal mr-2"><a href="https://www.paypal.com/us/signin" target="blank">Log into my Paypal</a></i> </button>
+                          <a href="/pay">Complete Payment</a>
+                        </p>
+                        </p>
+                      </div>
+                      <!-- End -->
+            
+                      <!-- bank transfer info -->
+                      <div id="nav-tab-bank" class="tab-pane fade">
+                        <form role="form" action="/pay">
+                          <h6>Bank account details</h6>
+                          <label for="username">Bank Name</label>
+                              <input type="text" name="username" placeholder="Bank Name" required class="form-control">
+                              <label for="username">Account Number</label>
+                              <input type="number" name="username" placeholder="Account Number" required class="form-control">
+                              <label for="username">Routing Number</label>
+                              <input type="number" name="username" placeholder="Routing Number" required class="form-control">
+                              <button type="submit" formaction="/pay" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Confirm Payment</button>
+                        </form>
+                        </div>
+                      <!-- End -->
+                    </div>
+                    <!-- End -->
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    
+
+        
+        
+</div>
+        
+</body>
+<style>
+
+.carousel-item:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.image:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+$(function () {
+  $('.carousel').carousel()
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</html>   

@@ -1,0 +1,53 @@
+<html>
+<head> 
+  <title> AG Machine Cloud </title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>      
+<body>
+    <div style="background-color: #141b2e; width: 100%; height: 90px;">
+        <div style="width: 7%; height: 70px; border-radius: 50%; background-image: url(http://www.mxmexhibitions.com/agrotecno/img/Buildafro.png); margin-left: 2%; position: absolute; top: 10; background-size: 85%; background-position:center; background-position-x: 10; float: left;"></div>
+        <h1 style="color: cornsilk; position: absolute; top: 15; font-size: 350%; padding-left: 10%;">AG MACHINE CLOUD</h1>
+    </div>
+    <div style="width: 100%; height: 700px; background-image: url(https://innotechtoday.com/wp-content/uploads/2019/07/countryside-2326787_1280-1.jpg); background-size: 100%;">
+        <form action="/main" method="POST" style="width: 70%; padding-left: 25%; padding-top: 3%;">
+            <div class="form-group">
+              <label for="exampleInputEmail1" style="color: white;">Email address</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" style="color: white;">Password</label>
+              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-append">
+                    <label class="input-group-text" for="role";>Role</label>
+                </div>
+              <select class="custom-select" id="role" name="role" required>
+                <option selected>Choose Role</option>
+                <option value="F">FARMER</option>
+                <option value="MC">MACHINECONTROLLER</option>
+                <option value="SCS">Service Carrier Staff</option>
+              </select>
+            </div>
+            <button type="submit" formaction="/Home" class="btn btn-primary" style="color: white;">Submit</button><br>
+            <label>Not a User <a href="/register" style="color:white;">Register</a></label>
+          </form>
+
+        </div>
+
+    </div>
+</body>     
+
+<script type = "text/javascript">
+    
+      
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</html>

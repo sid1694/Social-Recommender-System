@@ -1,0 +1,70 @@
+<html>
+<head> 
+  <title> AG Machine Cloud </title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>      
+<body>
+    <div style="background-color: #141b2e; width: 100%; height: 90px;">
+        <div style="width: 7%; height: 70px; border-radius: 50%; background-image: url(http://www.mxmexhibitions.com/agrotecno/img/Buildafro.png); margin-left: 2%; position: absolute; top: 10; background-size: 85%; background-position: center; background-position-x: 10; float: left;"></div>
+        <h1 style="color: cornsilk; position: absolute; top: 15; font-size: 350%; padding-left: 10%;">AG MACHINE CLOUD</h1>
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="float: left; background-color: #141b2e; border-color: #141b2e; font-size: 200%; position:absolute; right: 0; margin-right: 2%;">
+            Menu
+          </a>
+        
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="float: left;">
+            <a class="dropdown-item" href="/mhome">HOME</a>
+            <a class="dropdown-item" href="/msensors">Sensors</a>
+            <a class="dropdown-item" href="/mmysensors">My Sensors</a>
+            <a class="dropdown-item" href="/mdashboard">Dashboard</a>
+          </div>
+    </div>
+    <div style="width: 15%; height: 700px; background-color:rgb(13, 30, 61); float: left">
+        <div style="background-image: url(https://middle.pngfans.com/20190526/yi/user-logo-png-user-computer-icons-clipart-c58837c78f66866c.jpg); width: 63%; height: 120px; border-radius: 50%; background-size: 100%; background-position: center; float: left; margin-top: 10%; margin-left: 22%; margin-bottom: 10%;"></div>
+        <p style="padding-left: 20%; font-size: 200%; color:white;">Welcome</p>
+        <p style="padding-left: 20%; font-size: 200%; color:white;"><%= user[0].firstname %></p>
+    </div>
+    <div style="width: 85%; height: 700px; margin-left: 15%; background-color:rgb(12, 6, 41);background-size: 102%;">
+        <h1 style="color: white; font-size:350%; margin-left: 5%; padding-left: 34%;">Machines</h1>      
+    
+<div class="row" style="padding-top: 8%;">
+    <div class="col-4">
+        <div class="image" style="width:50%; height:200px; border-radius: 50%; background-image: url(https://s3.us-west-2.amazonaws.com/hobbyfarms.com/2019/10/14-seed-drills-david-wright-flickr-e.jpg); margin-left: 15%; margin-top: 5%; background-size: 180%; background-position-y: 30%; background-position-x: 20%;" onclick="location.href='/madd'"></div>
+        <h1 style="margin-top: 2%; margin-left: 13%; color:whitesmoke;">Add Machine</h1>
+    </div>
+    <div class="col-4">
+            <div class="image" style="width:50%; height:200px; border-radius: 50%; background-image: url(https://www.vippng.com/png/detail/221-2219384_google-received-delete-icon-white-png.png); margin-left: 15%; margin-top: 5%; background-size: 100%; background-position: center;" onclick="location.href='/mdelete'"></div>
+            <h1 style="margin-top: 2%; margin-left: 13%; color: whitesmoke;">Delete Machine</h1>
+        </div>
+        <div class="col-4">
+                <div class="image" style="width:50%; height:200px; border-radius: 50%; background-image: url(https://thumbs.dreamstime.com/z/tractor-modern-agriculture-equipment-6424258.jpg); margin-left: 15%; margin-top: 5%; background-size: 160%; background-position-y: 20%; background-position-x: 80%;" onclick="location.href='/mmymachines'"></div>
+                <h1 style="margin-top: 2%; margin-left: 13%; color: whitesmoke;">My Machines</h1>
+            </div>
+</div>
+</div>
+
+</body>
+<style>
+
+.carousel-item:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.image:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</html>   

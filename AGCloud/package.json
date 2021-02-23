@@ -1,0 +1,25 @@
+{
+  "name": "assignment5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert-node": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mapbox-gl": "^1.5.0",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.5",
+    "mongoose-auto-increment": "^5.0.1",
+    "monk": "^7.1.1",
+    "view-engine": "^1.1.1"
+  }
+}
